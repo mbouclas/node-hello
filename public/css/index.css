@@ -1,0 +1,282 @@
+/* 
+ * Fonts
+ * -----
+ */
+
+@font-face {
+  font-family: 'museo_slab';
+  src: url('../../fonts/museo-slab/museo-slab-webfont.eot');
+  src: url('../../fonts/museo-slab/museo-slab-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/museo-slab/museo-slab-webfont.woff') format('woff'),
+       url('../../fonts/museo-slab/museo-slab-webfont.ttf') format('truetype'),
+       url('../../fonts/museo-slab/museo-slab-webfont.svg#museo_slab_500regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ABeeZee'), local('ABeeZee-Regular'), url('../../fonts/ABeeZee/ABeeZee.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../fonts/fontawesome/fontawesome-webfont.eot');
+  src: url('../../fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), 
+  	 	 url('../../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), 
+  	 	 url('../../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), 
+  	 	 url('../../fonts/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+ * Resets
+ * ------
+ */
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, #side {
+	font-family: 'museo_slab';
+	color: #444;
+}
+
+h1, h2, h3, h4 {
+	margin-bottom: 40px;
+}
+
+h1 a {
+	position: relative;
+}
+
+h1 a:hover:before {
+	position: absolute;
+	top: 9px;
+	left: -30px;
+
+	content: "\f08d";
+	
+	font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+p {
+	color: rgba(0,0,0, .7);
+	font-family: 'ABeeZee', sans-serif;
+	line-height: 24px;
+	margin-bottom: 40px;
+}
+
+a, a.visited, a.active, h1 a:hover {
+	text-decoration: none;
+	color: #b90000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgba(0,0,0, .1);
+}
+
+pre { 
+	border: 1px solid #e0ded3;
+	border-radius: 4px;
+	margin: 10px 10px 40px 10px;
+	padding: 10px;
+	background-color: #f0efe8;
+	overflow: auto;
+	font-size: 14px;
+}
+
+
+/* 
+ * Syntax
+ * ------
+ */
+
+code { color: rgba(0,0,0, 1); }
+code .keyword              { font-weight: bold; color: #6089d4; }
+code .string, code .regexp { color: green }
+code .class, code .special { color: #6089d4 }
+code .number               { color: red }
+code .comment              { color: grey }
+
+
+/* 
+ * Sidebar
+ * -------
+ */
+
+#side {
+	margin-left: 50px;
+	width: 181;
+	float: left;
+	margin-top: -30px;
+	text-align: center;
+	position: fixed;
+}
+
+#bio {
+	margin-top: 40px;
+	font-size: 25px;
+}
+
+#bio img {
+	opacity: 0.5;
+}
+
+#bio img:first-child {
+	margin-bottom: 10px;
+}
+
+#bio img:hover {
+	opacity: 1;
+}
+
+#bio a, #bio a:hover, #floating-head a, #floating-head a:hover {
+	font-family: 'FontAwesome';
+	font-size: 35px;
+	width: 25px;
+	height: 25px;
+	text-decoration: none;
+}
+
+.github-link:after {
+	content: "\f092";
+}
+
+.twitter-link:after {
+	content: "\f081";
+}
+
+.linkedin-link:after {
+	content: "\f08c";
+}
+
+#ribbon {
+	position: relative;
+	padding-top: 40px;
+	height: 390px;
+	background-color: #b90000;
+	display: inline-block;
+	color: #ebead5;
+	line-height: 20px
+}
+
+#ribbon:after {
+	content: url("../img/rbnbtm.png");
+	position: absolute;
+	bottom: -5px;
+	left: 0px;
+	width: 181;
+	height: 153;
+	background: transparent;
+}
+
+#ribbon img {
+	margin: 13px;
+	margin-top: 50px;
+}
+
+#floating-head {
+  display: none;
+}
+
+/* 
+ * Content
+ * -------
+ */
+
+
+#articles {
+	margin-left: 280px;
+	margin-right: 50px;
+  max-width: 700px;
+}
+
+#articles img {
+  width: 100%;
+}
+
+#toc {
+	padding: 100px 0;
+	font-family: 'museo_slab';
+}
+
+#toc div {
+	border-bottom: 2px dotted rgba(0,0,0, .2);
+	height: 16px;
+}
+
+#toc .date {
+	float: right;
+	color: #808080;
+	display: inline-block;
+	background-color: #fff;
+	padding-top: 4px;
+	padding-left: 10px;
+}
+
+#toc div a {
+	font-size: 16px;
+	margin: 4px 0 4px;
+	display: inline-block;
+	background-color: #fff;
+	padding-right: 10px;
+}
+
+/* 
+ * Mobile
+ * ------
+ */
+
+@media screen and (max-width: 600px),
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+  #side {
+    display: none;
+  }
+
+  #articles {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 700px;
+    overflow: hidden;
+  }
+
+  #floating-head {
+    font-size: 25px;
+    font-family: 'museo_slab';
+    background-color: #b90000;
+    display: block;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #floating-head p {
+    color: #ebead5;
+    margin: 0px;
+    padding: 10px 0 0;
+  }
+
+  #floating-head a {
+    
+    color: #ebead5;
+    margin: 0 10px 0;
+  }
+}
